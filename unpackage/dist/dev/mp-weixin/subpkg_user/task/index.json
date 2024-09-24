@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "任务数据",
+  "usingComponents": {
+    "sl-uni-calendar": "./components/sl-uni-calendar/sl-uni-calendar"
+  }
+}

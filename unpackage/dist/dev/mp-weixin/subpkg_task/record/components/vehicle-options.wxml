@@ -1,0 +1,1 @@
+<view class="vehicle-options data-v-3a448a82"><view wx:for="{{a}}" wx:for-item="option" wx:key="c" class="{{['option', 'data-v-3a448a82', option.b && 'active']}}" bindtap="{{option.d}}">{{option.a}}</view></view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "sl-pickup": "./components/pickup",
+    "sl-delivery": "./components/delivery",
+    "sl-complete": "./components/complete"
+  }
+}

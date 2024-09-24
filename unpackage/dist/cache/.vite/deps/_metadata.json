@@ -1,0 +1,25 @@
+{
+  "hash": "e21583fa",
+  "configHash": "3495121f",
+  "lockfileHash": "ba2a9ed9",
+  "browserHash": "d56eb517",
+  "optimized": {
+    "pinia-plugin-persistedstate": {
+      "src": "../../../../../node_modules/pinia-plugin-persistedstate/dist/index.js",
+      "file": "pinia-plugin-persistedstate.js",
+      "fileHash": "1fb691d8",
+      "needsInterop": false
+    },
+    "uni-app-fetch": {
+      "src": "../../../../../node_modules/uni-app-fetch/dist/index.js",
+      "file": "uni-app-fetch.js",
+      "fileHash": "b54e9e92",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-Y2F7D3TJ": {
+      "file": "chunk-Y2F7D3TJ.js"
+    }
+  }
+}
