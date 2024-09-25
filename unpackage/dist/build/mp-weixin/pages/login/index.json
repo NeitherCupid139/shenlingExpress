@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "sl-account": "./components/account",
+    "sl-mobile": "./components/mobile"
+  }
+}

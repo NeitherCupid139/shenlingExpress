@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js"),t=e.createPersistedState({key:e=>`__persisted__${e}`,storage:{getItem:t=>e.index.getStorageSync(t),setItem:(t,s)=>{e.index.setStorageSync(t,s)}}});exports.piniaPluginPersisitedstate=t;

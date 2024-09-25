@@ -1,0 +1,1 @@
+"use strict";const e=require("../common/vendor.js"),t=e.defineStore("task",(()=>({recordData:e.ref({id:"",startTime:"",endTime:"",isBreakRules:!1,breakRulesType:null,penaltyAmount:null,deductPoints:null,isFault:!1,faultType:null,faultDescription:"",faultImagesList:[],isAccident:!1,accidentType:null,accidentDescription:"",accidentImagesList:[]})})));exports.useTaskStore=t;

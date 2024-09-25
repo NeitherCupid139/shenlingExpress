@@ -1,0 +1,1 @@
+<view class="counter data-v-1dba5821"><button class="button data-v-1dba5821" type="primary" bindtap="{{a}}">-</button><input class="input data-v-1dba5821" type="text" value="{{b}}" bindinput="{{c}}"/><button class="button data-v-1dba5821" type="primary" bindtap="{{d}}">+</button></view>

@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),o=require("../../stores/counter.js"),r={__name:"index",setup(r){const t=o.useCounterStore();return(o,r)=>({a:e.o((o=>e.unref(t).count--)),b:e.unref(t).count,c:e.o((o=>e.unref(t).count=o.detail.value)),d:e.o((o=>e.unref(t).count++))})}},t=e._export_sfc(r,[["__scopeId","data-v-1dba5821"]]);wx.createPage(t);

@@ -63,14 +63,15 @@ const _sfc_main = {
         }),
         g: delayReason.value,
         h: common_vendor.o(($event) => delayReason.value = $event.detail.value),
-        i: common_vendor.p({
+        i: common_vendor.t(delayReason.value.length),
+        j: common_vendor.p({
           direction: "column"
         }),
-        j: common_vendor.o(onFormSubmit),
-        k: common_vendor.p({
+        k: common_vendor.o(onFormSubmit),
+        l: common_vendor.p({
           border: false
         }),
-        l: common_vendor.p({
+        m: common_vendor.p({
           border: false
         })
       };

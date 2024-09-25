@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/task/index",
+    "pages/login/index",
+    "pages/my/index",
+    "pages/message/index",
+    "pages/pinia/index"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg_task",
+      "pages": [
+        "detail/index",
+        "delay/index",
+        "pickup/index",
+        "except/index",
+        "delivery/index",
+        "orders/index",
+        "guide/index",
+        "record/index"
+      ]
+    },
+    {
+      "root": "subpkg_message",
+      "pages": [
+        "content/index"
+      ]
+    },
+    {
+      "root": "subpkg_user",
+      "pages": [
+        "truck/index",
+        "task/index",
+        "settings/index",
+        "mobile/index",
+        "password/index",
+        "notify/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTitleText": "神领快递",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "color": "#818181",
+    "selectedColor": "#EF4F3F",
+    "list": [
+      {
+        "text": "任务",
+        "pagePath": "pages/task/index",
+        "iconPath": "static/tabbar/task_normal.png",
+        "selectedIconPath": "static/tabbar/task_selected.png"
+      },
+      {
+        "text": "消息",
+        "pagePath": "pages/message/index",
+        "iconPath": "static/tabbar/message_normal.png",
+        "selectedIconPath": "static/tabbar/message_selected.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/my/index",
+        "iconPath": "static/tabbar/my_normal.png",
+        "selectedIconPath": "static/tabbar/my_selected.png"
+      }
+    ]
+  },
+  "requiredPrivateInfos": [
+    "chooseLocation"
+  ],
+  "usingComponents": {}
+}
