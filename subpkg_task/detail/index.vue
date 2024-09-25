@@ -3,6 +3,14 @@ import { onLoad } from "@dcloudio/uni-app";
 import taskApi from "@/apis/task.js";
 import { ref } from "vue";
 
+/**
+ * @description 获取url传入的参数
+ * @returns {void}
+ * @param {Object} query - url传入的参数
+ * @todo 获取url传入的参数
+ * @author 张玉红
+ */
+
 // 任务详情
 const taskDetail = ref({});
 const id = ref(0);
