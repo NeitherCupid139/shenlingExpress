@@ -18,34 +18,31 @@ onMounted(async () => {
 
 // 下一页页码
 const nextPage = ref(1);
-const pickUpList = ref([]);
 const isEmpty = ref(false);
 const hasMore = ref(true);
 const isTriggered = ref(false);
-
 
 // 监听页面是否滚动到底部
 function onScrollToLower() {
 	// 没有更多数据时则不需要再请求了
 	if (!hasMore.value) return;
+	// 更新下一页页码
+	nextPage.value++;
+
 	// 获取下一页数据
-	getPickUpList(nextPage.value);
+	getPickUpList(nextPage.value, 5);
 }
 
 // 获取任务列表
-async function getPickUpList(page = 1, pageSize = 5) {
+async function getPickUpList(page, pageSize = 5) {
 	const { code, data } = await taskApi.list(1, page, pageSize);
 	// 检测接口是否调用成功
-	if (code !== 200) return uni.utils.toast("获取列表失败，稍后重试！");
-	// 渲染任务列表
-	// pickUpList.value = data.items
-	pickUpList.value = [...pickUpList.value, ...(data.items || [])];
-	// 计算下一页页码
-	nextPage.value = ++data.page;
-	// 判断列表是否为空
-	isEmpty.value = pickUpList.value.length === 0;
-	// 判断还有没有更多的数据
-	hasMore.value = nextPage.value <= data.pages;
+	console.log(data.code);
+	if (data.code !== 200) uni.utils.toast("获取任务列表失败", "error");
+	// 更新任务列表
+
+	console.log(data.data.items);
+	list.value = list.value.concat(data.data.items);
 }
 
 // 监听用户的下拉操作
