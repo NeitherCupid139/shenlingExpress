@@ -9,7 +9,7 @@ const planDepartureTime = ref(""); //接收url传入的planDepartureTime
  * @returns {void}
  * @param {Object} query - url传入的参数
  * @todo 获取url传入的参数
- * @author 钟富源
+ * @author 张玉红
  */
 onLoad((query) => {
 	id.value = query.id;
