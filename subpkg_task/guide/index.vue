@@ -1,6 +1,10 @@
 <script setup>
 import { ref } from "vue";
 
+/**
+ * @author 沈智鑫
+ */
+
 // 初始经纬度
 const latitude = ref(39.909);
 const longitude = ref(116.39742);
