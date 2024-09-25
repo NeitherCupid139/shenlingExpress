@@ -23,9 +23,6 @@ const isEmpty = ref(false);
 const hasMore = ref(true);
 const isTriggered = ref(false);
 
-onMounted(() => {
-	getPickUpList();
-});
 
 // 监听页面是否滚动到底部
 function onScrollToLower() {
