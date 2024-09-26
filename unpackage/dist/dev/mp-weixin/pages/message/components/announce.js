@@ -17,12 +17,24 @@ const _sfc_main = {
     const list = common_vendor.ref([]);
     common_vendor.onMounted(async () => {
       let res = await apis_message.msgApi.list(200);
+      console.log(res);
       list.value = res.data.data.items;
+      console.log(list.value);
     });
+    const isRead = common_vendor.ref(false);
+    async function onReadAll() {
+      console.log("onReadAll");
+      console.log(list.value);
+      await apis_message.msgApi.allReadAnnounce();
+      let res = await apis_message.msgApi.list(200);
+      list.value = res.data.data.items;
+      isRead.value = true;
+    }
     return (_ctx, _cache) => {
       return {
-        a: common_vendor.f(list.value, (item, k0, i0) => {
-          return {
+        a: common_vendor.o(($event) => onReadAll()),
+        b: common_vendor.f(list.value, (item, k0, i0) => {
+          return common_vendor.e(!isRead.value ? {} : {}, {
             a: item.id,
             b: "4b861c49-1-" + i0 + ",4b861c49-0",
             c: common_vendor.p({
@@ -31,9 +43,10 @@ const _sfc_main = {
               title: item.title,
               rightText: item.created
             })
-          };
+          });
         }),
-        b: common_vendor.p({
+        c: !isRead.value,
+        d: common_vendor.p({
           border: false
         })
       };

@@ -13,6 +13,9 @@ const msgApi = {
       page,
       pageSize
     });
+  },
+  allReadAnnounce() {
+    return apis_uniFetch.uniFetch.put("/driver/messages/readAll/200");
   }
 };
 exports.msgApi = msgApi;

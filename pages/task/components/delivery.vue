@@ -18,7 +18,7 @@ onMounted(async () => {
 });
 </script>
 <template>
-	<scroll-view scroll-y refresher-enabled class="scroll-view">
+	<scroll-view scroll-y  class="scroll-view">
 		<view class="scroll-view-wrapper">
 			<view class="task-card" v-for="item in deliveryList" :key="item.id">
 				<navigator

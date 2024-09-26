@@ -54,7 +54,7 @@ function getEndTime(e) {
 			<button class="button" @click="search">筛选</button>
 		</view>
 	</view>
-	<scroll-view scroll-y refresher-enabled class="scroll-view">
+	<scroll-view scroll-y class="scroll-view">
 		<view class="scroll-view-wrapper">
 			<view
 				v-if="list.length > 0"

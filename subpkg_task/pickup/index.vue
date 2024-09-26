@@ -40,6 +40,7 @@ async function onSubmitForm() {
 	uni.switchTab({
 		url: "/pages/task/index",
 	});
+	
 }
 </script>
 <template>

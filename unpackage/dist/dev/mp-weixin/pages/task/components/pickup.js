@@ -10,29 +10,22 @@ const _sfc_main = {
       list.value = res.data.data.items;
     });
     const nextPage = common_vendor.ref(1);
-    const pickUpList = common_vendor.ref([]);
-    const isEmpty = common_vendor.ref(false);
+    common_vendor.ref(false);
     const hasMore = common_vendor.ref(true);
     const isTriggered = common_vendor.ref(false);
-    common_vendor.onMounted(() => {
-      getPickUpList();
-    });
     function onScrollToLower() {
       if (!hasMore.value)
         return;
-      getPickUpList(nextPage.value);
+      nextPage.value++;
+      getPickUpList(nextPage.value, 5);
     }
-    async function getPickUpList(page = 1, pageSize = 5) {
+    async function getPickUpList(page, pageSize = 5) {
       const { code, data } = await apis_task.taskApi.list(1, page, pageSize);
-      if (code !== 200)
-        return common_vendor.index.utils.toast("获取列表失败，稍后重试！");
-      pickUpList.value = [...pickUpList.value, ...data.items || []];
-      nextPage.value = ++data.page;
-      isEmpty.value = pickUpList.value.length === 0;
-      hasMore.value = nextPage.value <= data.pages;
-    }
-    async function onScrollViewRefresh() {
-      await getPickUpList();
+      console.log(data.code);
+      if (data.code !== 200)
+        common_vendor.index.utils.toast("获取任务列表失败", "error");
+      console.log(data.data.items);
+      list.value = list.value.concat(data.data.items);
     }
     return (_ctx, _cache) => {
       return common_vendor.e({
@@ -56,8 +49,7 @@ const _sfc_main = {
         })
       }, {}, {
         b: common_vendor.o(onScrollToLower),
-        c: common_vendor.o(onScrollViewRefresh),
-        d: isTriggered.value
+        c: isTriggered.value
       });
     };
   }

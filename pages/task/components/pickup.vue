@@ -44,17 +44,11 @@ async function getPickUpList(page, pageSize = 5) {
 	console.log(data.data.items);
 	list.value = list.value.concat(data.data.items);
 }
-
-// 监听用户的下拉操作
-async function onScrollViewRefresh() {
-	await getPickUpList();
-}
 </script>
 
 <template>
 	<scroll-view
 		@scrolltolower="onScrollToLower"
-		@refresherrefresh="onScrollViewRefresh"
 		:refresher-triggered="isTriggered"
 		scroll-y
 		refresher-enabled
