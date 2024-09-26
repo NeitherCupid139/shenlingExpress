@@ -55,7 +55,12 @@
             "urlCheck" : false
         },
         "usingComponents" : true,
-        "requiredPrivateInfos" : [ "chooseLocation" ]
+        "requiredPrivateInfos" : [ "chooseLocation" ],
+        "permission" : {
+            "scope.userLocation" : {
+                "desc" : ""
+            }
+        }
     },
     "mp-alipay" : {
         "usingComponents" : true
