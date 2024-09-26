@@ -36,7 +36,7 @@ onLoad((params) => {
  * @description 提交表单
  * @returns {void}
  * @todo 提交表单
- * @author 钟富源
+ * @author 陈雨虹
  */
 async function onSubmitForm() {
 	// 准备好提交的数据

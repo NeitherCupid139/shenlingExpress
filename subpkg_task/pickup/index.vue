@@ -6,6 +6,9 @@ const id = ref(0);
 onLoad((params) => {
 	id.value = params.id;
 });
+/**
+ * @author 陈雨虹
+ */
 // 提货凭证图片
 const receiptPictrues = ref([]);
 const cargoPickUpPictureList = computed(() => {

@@ -15,11 +15,12 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "3.5.8",
-  "appid": "wx6a314450de6cd012",
+  "appid": "wx4032753726d79a88",
   "projectname": "神领物流",
   "condition": {
     "miniprogram": {
